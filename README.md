@@ -1,7 +1,7 @@
 # tomatOD
 **tomatOD** is a dataset for tomato fruit localization and ripening classification, containing images of tomato fruits in a greenhouse and high-quality expert annotations from agriculturists. It is a task-specific object detection dataset for tomato fruits, suitable for precision agriculture applications that typically require highly-accurate localization.
 
-The tomatOD dataset consists of 277 images with 2418 annotated tomato fruit samples of unripe, semi-ripe and fully-ripe class.
+The tomatOD dataset consists of 277 images with 2418 annotated tomato fruit samples of unripe, semi-ripe and fully-ripe classes.
 
 
 The images and the annotations  are licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. The contents of this repository are released under the [license](https://github.com/up2metric/tomatOD/blob/master/LICENSE).
@@ -29,21 +29,21 @@ The annotations of the tomatOD dataset are provided in a COCO compatible format.
 
 ### Statistics and data analysis
 ##### tomatOD classes
-The table below shows the number of annotated object for each class of tomatOD dataset.
+The table below shows the number of annotated objects for each class of the **tomatOD** dataset.
 
 | unripe | semi-ripe | fully-ripe |
 |:------:|:---------:|:----------:|
 | 1592   | 395       | 431        |
 
-Additionally, the following figure illustrates the relative appearance frequencies of those three classes of dataset.
+Additionally, the following figure illustrates the relative appearance frequencies of those three classes of the dataset.
 The classes of the tomatOD dataset are clearly not balanced, however their relative proportion is in line with the actual appearance frequency of each class in a realistic scenario.
 
 <img src="./assets/classes_proportions_tomatOD.png" width="500">
 
 ##### Size distribution of bounding boxes
-The percentile relative size of each bounding box is calculated, that indicates the proportion of the diagonal length of each box over the diagonal length of the image.
+The percentile relative size of each bounding box is calculated, which indicates the proportion of the diagonal length of each box over the diagonal length of the image.
 In the image below, the histogram of the percentile relative size distribution of the tomatOD bounding boxes is presented.
-Most of the bounding boxes have size between 3% to 15% relative to the image size.
+Most of the bounding boxes have a size of 3% to 15% relative to the image size.
 
 <img src="./assets/histogramm_boxes.png" width="500">
 
@@ -61,7 +61,7 @@ As the next figure shows, more than 50% of the tomatOD images contain objects of
 
 
 ### Experiment
-Six state-of-the-art detectors are evaluated at the proposed tomatOD dataset. In detail, Faster RCNN with Inception v2, SSD with both Inception v2 and Mobilenet v2, PPN with Inception v2. RetinaNet (ResNet 101) and Yolo v3 are trained on tomatOD train set for 450 epochs, all of them pretrained on COCO dataset. Afterwards, they are evaluated on test set. Hyperparameter fine-tuning was performed for all networks in order to perform optimally on the tomatOD dataset.
+Six state-of-the-art detectors are evaluated at the proposed tomatOD dataset. In detail, Faster RCNN with Inception v2, SSD with both Inception v2 and Mobilenet v2, PPN with Inception v2, RetinaNet (ResNet 101) and Yolo v3 are trained on tomatOD train set for 450 epochs, all of them pretrained on COCO dataset. Afterwards, they are evaluated on test set. Hyperparameter fine-tuning was performed for all networks in order to perform optimally on the tomatOD dataset.
 
 The figure below illustrates the accuracy over epochs for both the train and the test set for every trained model.
 
@@ -80,6 +80,6 @@ In the precision-recall curves diagram, the unripe class is indicated by the gre
 
 
 ### Citations
-If you use the tomatOD dataset in your work, please cite it as:
+We hope that researchers in any domain will find the tomatOD dataset helpful for their own research. If you use the tomatOD dataset in your work, please cite it as:
 
-APA-style citation: "Tsironis V., Bourou S., Stentoumis C., tomatOD: Evaluation of object detection algorithms on a new real-world tomato dataset, 2020. Available from https://github.com/up2metric/tomatOD ".
+"Tsironis V., Bourou S., Stentoumis C. (2020). tomatOD: Evaluation of object detection algorithms on a new real-world tomato dataset. In ISPRS - International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences. Available from https://github.com/up2metric/tomatOD ".
